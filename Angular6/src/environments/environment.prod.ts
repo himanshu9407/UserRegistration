@@ -1,3 +1,6 @@
+import { clearScreenDown } from 'readline';
+
 export const environment = {
-  production: true
+  production: true,
+  apiBaseUrl : 'http://localhost:3000/api'
 };

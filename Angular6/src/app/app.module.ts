@@ -27,11 +27,12 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     SignInComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

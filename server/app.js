@@ -8,16 +8,17 @@ const cors = require('cors');
 const passport = require('passport');
 
 const rtsIndex = require('./routes/index.router');
-const rtsProduct = require('./routes/product.router');
 
 var app = express();
 
 // middleware
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use(passport.initialize());
 app.use('/api', rtsIndex);
-app.use('/api/Product', rtsProduct);
+
+
 
 // error handler
 app.use((err, req, res, next) => {
